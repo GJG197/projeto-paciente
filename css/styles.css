@@ -37,14 +37,14 @@ header p {
     font-size: 1.2em;
 }
 
-/* Seção do paciente */
+/* Sección del paciente */
 .info-paciente {
     margin-bottom: 30px;
 }
 
 .paciente-detalle {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -54,12 +54,20 @@ header p {
     background-color: #fafafa; /* Fundo ligeiramente cinza */
 }
 
+.paciente-foto {
+    flex: 0 0 150px;
+}
+
 .paciente-foto img {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.paciente-info {
+    flex: 1;
 }
 
 .paciente-info ul {
@@ -136,4 +144,73 @@ footer {
 footer p {
     margin: 0;
     font-size: 1em;
+}
+
+/* Media Queries para telas menores */
+
+@media (max-width: 768px) {
+    .paciente-detalle {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paciente-foto {
+        margin-bottom: 15px;
+    }
+
+    .paciente-foto img {
+        width: 120px;
+        height: 120px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .paciente-info li {
+        font-size: 1em;
+    }
+
+    table, th, td {
+        font-size: 0.9em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 480px) {
+    .paciente-detalle {
+        padding: 10px;
+    }
+
+    .paciente-foto img {
+        width: 100px;
+        height: 100px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    .paciente-info li {
+        font-size: 0.9em;
+    }
+
+    table, th, td {
+        font-size: 0.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
 }
