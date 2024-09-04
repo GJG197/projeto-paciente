@@ -143,3 +143,51 @@ footer {
     border-radius: 0 0 10px 10px;
 }
 
+/* Media Queries para adaptabilidad */
+@media (max-width: 768px) {
+    /* Ajustes para pantallas pequeñas */
+    .info-paciente h2 {
+        font-size: 1.5em;
+    }
+
+    .paciente-detalle {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .paciente-foto {
+        flex: 0 0 120px; /* Reducir el tamaño de la foto */
+    }
+
+    .paciente-info-completa {
+        gap: 10px;
+    }
+
+    .paciente-info, .paciente-info-sensivel {
+        padding: 8px;
+    }
+
+    table, th, td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para pantallas muy pequeñas */
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .info-paciente h2 {
+        font-size: 1.2em;
+    }
+
+    .paciente-foto {
+        flex: 0 0 100px; /* Reducir aún más el tamaño de la foto */
+    }
+}
