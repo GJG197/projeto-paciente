@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Paciente - Apresentação de Dados</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Perfil do Paciente</h1>
+        <p>Apresentação de Dados Fictícios para Projetos de Saúde</p>
+    </header>
+
+    <main>
+        <!-- Seção de Informações Pessoais com Foto -->
+        <section class="info-paciente">
+            <h2>Informações Pessoais</h2>
+            <div class="paciente-detalle">
+                <div class="paciente-foto">
+                    <img src="img/foto-paciente.jpg" alt="Foto do Paciente">
+                </div>
+                <div class="paciente-info-completa">
+                    <div class="paciente-info">
+                        <ul>
+                            <li><strong>Nome:</strong> João Silva</li>
+                            <li><strong>Idade:</strong> 35 anos</li>
+                            <li><strong>Género:</strong> Masculino</li>
+                            <li><strong>Tipo de sangue:</strong> AB+</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Botão para Mostrar Informação Sensível -->
+                    <div id="pin-container">
+                        <label for="pin">Introduza o PIN para ver informação sensível:</label>
+                        <input type="password" id="pin" placeholder="PIN">
+                        <button id="toggle-btn" onclick="toggleInformacao()">Mostrar</button>
+                    </div>
+
+                    <!-- Informações Sensíveis (inicialmente ocultas) -->
+                    <div id="info-sensivel" class="paciente-info-sensivel" style="display: none;">
+                        <ul>
+                            <li><strong>ID Paciente:</strong> 123456</li>
+                            <li><strong>ID:</strong> 12345678 9 ZY3</li>
+                            <li><strong>N.Utente:</strong>200000000</li>
+                            <li><strong>NISS:</strong>12345678912</li>
+                            <li><strong>NIF:</strong> 100000000</li>
+                            <li><strong>Data de Nascimento:</strong> 15 de março, 1989</li>
+                            <li><strong>Seguro:</strong>Não (x) Sim ()</li>
+                            <li><strong>Morada:</strong> Rua Falsa 123, Cidade Exemplo</li>
+                            <li><strong>Telefone:</strong> (123) 456-7890</li>
+                            <li><strong>Email:</strong> joao.silva@example.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seções restantes -->
+        <section class="historial-medico">
+            <h2>Histórico Médico</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Diagnóstico</th>
+                        <th>Tratamento</th>
+                        <th>Observações</th>
+                        <th>Baixa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-09-02</td>
+                        <td>Migrânea</td>
+                        <td>Repouso e paracetamol</td>
+                        <td>Recuperação completa em dois dias</td>
+                        <td>Sim</td>
+                    </tr>
+                    <tr>
+                        <td>2023-01-15</td>
+                        <td>Gripe Comum</td>
+                        <td>Antialérgicos</td>
+                        <td>Recuperação completa em uma semana</td>
+                        <td>Não</td>
+                    </tr>
+                    <tr>
+                        <td>2022-11-02</td>
+                        <td>Alergia Sazonal</td>
+                        <td>Anti-histamínicos</td>
+                        <td>Sem complicações</td>
+                        <td>Não</td>
+                    </tr>
+                    <tr>
+                        <td>2022-07-18</td>
+                        <td>Fratura do Braço</td>
+                        <td>Gesso durante 6 semanas</td>
+                        <td>Reabilitação completa</td>
+                        <td>Sim</td>
+                    </tr>
+                    <tr>
+                        <td>2020-12-12</td>
+                        <td>Covid-19</td>
+                        <td>Repouso 15 dias e paracetamol</td>
+                        <td>Reabilitação completa em 15 dias</td>
+                        <td>Sim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Seção de Alergias -->
+        <section class="alergias">
+            <h2>Alergias</h2>
+            <ul>
+                <li><strong>Pólen:</strong> Moderada</li>
+                <li><strong>Ácaros do pó:</strong> Leve</li>
+                <li><strong>Penicilina:</strong> Grave</li>
+            </ul>
+        </section>
+
+        <!-- Seção de Medicamentos Atuais -->
+        <section class="medicamentos">
+            <h2>Medicamentos Atuais</h2>
+            <ul>
+                <li><strong>Ibuprofeno:</strong> 400 mg a cada 8 horas</li>
+                <li><strong>Loratadina:</strong> 10 mg diários</li>
+            </ul>
+        </section>
+
+        <!-- Seção de Próximas Consultas -->
+        <section class="citas">
+            <h2>Próximas Consultas Médicas</h2>
+            <ul>
+                <li><strong>Data:</strong> 2024-09-15 | <strong>Especialidade:</strong> Cardiologia | <strong>Médico:</strong> Dr. Garcia</li>
+                <li><strong>Data:</strong> 2024-10-03 | <strong>Especialidade:</strong> Dermatologia | <strong>Médico:</strong> Dr. Lopes</li>
+            </ul>
+        </section>
+
+        <!-- Seção de Contactos de Emergência -->
+        <section class="contacto-emergencia">
+            <h2>Contactos de Emergência</h2>
+            <ul>
+                <li><strong>Nome:</strong> Maria Santos | <strong>Relação:</strong> Esposa | <strong>Telefone:</strong> (123) 456-7891</li>
+                <li><strong>Nome:</strong> Carlos Silva | <strong>Relação:</strong> Irmão | <strong>Telefone:</strong> (123) 456-7892</li>
+                <li><strong>Nome:</strong> João Santos | <strong>Relação:</strong> Filho | <strong>Telefone:</strong> (123) 456-7892</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Apresentação de Dados Fictícios. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script>
+        function toggleInformacao() {
+            const pin = document.getElementById('pin').value;
+            const pinCorreto = '1234'; // PIN definido
+            const infoSensivel = document.getElementById('info-sensivel');
+            const toggleBtn = document.getElementById('toggle-btn');
+            const pinContainer = document.getElementById('pin-container');
+    
+            // Mostrar a informação se o PIN for correto
+            if (pin === pinCorreto) {
+                infoSensivel.style.display = 'block';
+                toggleBtn.style.display = 'none'; // Ocultar o botão
+                pinContainer.style.display = 'none'; // Esconde o campo PIN
+            } else {
+                alert('PIN incorreto. Tente novamente.');
+            }
+        }
+        </script>
+</body>
+</html>
