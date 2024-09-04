@@ -34,7 +34,7 @@
                     <div id="pin-container">
                         <label for="pin">Introduza o PIN para ver informação sensível:</label>
                         <input type="password" id="pin" placeholder="PIN">
-                        <button id="toggle-btn" onclick="toggleInformacao()">Mostrar</button>
+                        <button id="toggle-btn" aria-label="Mostrar informações sensíveis" onclick="toggleInformacao()">Mostrar</button>
                     </div>
 
                     <!-- Informações Sensíveis (inicialmente ocultas) -->
@@ -62,11 +62,11 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Data</th>
-                        <th>Diagnóstico</th>
-                        <th>Tratamento</th>
-                        <th>Observações</th>
-                        <th>Baixa</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Diagnóstico</th>
+                        <th scope="col">Tratamento</th>
+                        <th scope="col">Observações</th>
+                        <th scope="col">Baixa</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -170,6 +170,6 @@
                 alert('PIN incorreto. Tente novamente.');
             }
         }
-        </script>
+    </script>
 </body>
 </html>
