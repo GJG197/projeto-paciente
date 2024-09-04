@@ -1,0 +1,145 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Azul claro de fondo */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal */
+main {
+    background-color: white;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Cabeçalho */
+header {
+    background-color: #0288d1; /* Azul más fuerte */
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+/* Sección del paciente */
+.info-paciente h2 {
+    font-size: 2em; /* Aumenta el tamaño del texto */
+    color: #4682b4; /* Color azul claro */
+    border-bottom: 3px solid #4682b4; /* Añade una línea subrayada */
+    padding-bottom: 5px; /* Espacio entre el texto y la línea */
+    margin-bottom: 15px; /* Ajusta el margen inferior */
+    font-weight: bold; /* Hace el texto más grueso */
+}
+
+.paciente-detalle {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fafafa; /* Fondo ligeramente gris */
+}
+
+.paciente-foto {
+    flex: 0 0 150px;
+}
+
+.paciente-foto img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.paciente-info-completa {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.paciente-info, .paciente-info-sensivel {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.paciente-info ul, .paciente-info-sensivel ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.paciente-info ul li, .paciente-info-sensivel ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.paciente-info ul li:last-child, .paciente-info-sensivel ul li:last-child {
+    border-bottom: none;
+}
+
+/* Subrayado para títulos de secciones */
+h2 {
+    color: #0288d1;
+    margin-top: 0;
+    border-bottom: 2px solid #0288d1; /* Subrayado en los títulos */
+    padding-bottom: 5px;
+}
+
+/* Estilo general de secciones */
+section {
+    margin-bottom: 30px;
+}
+
+/* Tabla del historial médico */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: #0288d1;
+    color: white;
+}
+
+/* Pie de página */
+footer {
+    background-color: #0288d1;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
