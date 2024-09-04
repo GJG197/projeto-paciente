@@ -168,8 +168,15 @@ footer {
         padding: 8px;
     }
 
-    table, th, td {
+    table {
+        display: block; /* Hacer que la tabla se comporte como un bloque */
+        overflow-x: auto; /* Permite el desplazamiento horizontal */
+        -webkit-overflow-scrolling: touch; /* Habilita el desplazamiento suave en iOS */
+    }
+
+    th, td {
         padding: 8px;
+        font-size: 0.875em; /* Ajustar el tamaño de la fuente si es necesario */
     }
 }
 
