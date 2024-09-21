@@ -155,21 +155,21 @@
     <!-- Script JavaScript -->
     <script>
         function toggleInformacao() {
-            const pin = document.getElementById('pin').value;
-            const pinCorreto = ['1234', '5678', '9012']; // PIN definido
-            const infoSensivel = document.getElementById('info-sensivel');
-            const toggleBtn = document.getElementById('toggle-btn');
-            const pinContainer = document.getElementById('pin-container');
-    
-            // Mostrar a informação se o PIN for correto
-            if (pin === pinCorreto) {
-                infoSensivel.style.display = 'block';
-                toggleBtn.style.display = 'none'; // Ocultar o botão
-                pinContainer.style.display = 'none'; // Esconde o campo PIN
-            } else {
-                alert('PIN incorreto. Tente novamente.');
-            }
-        }
+    const pin = document.getElementById('pin').value;
+    const pinsCorretos = ['1234', '5678', '9012']; // Lista de PINs válidos
+    const infoSensivel = document.getElementById('info-sensivel');
+    const toggleBtn = document.getElementById('toggle-btn');
+    const pinContainer = document.getElementById('pin-container');
+
+    // Verifica si el PIN ingresado está en la lista de PINs permitidos
+    if (pinsCorretos.includes(pin)) {
+        infoSensivel.style.display = 'block'; // Muestra la información sensible
+        pinContainer.style.display = 'none'; // Oculta el campo de PIN
+        toggleBtn.textContent = 'Ocultar Informação Sensível'; // Cambia el texto del botón
+    } else {
+        alert('PIN incorreto! Tente novamente.'); // Mensaje de error si el PIN es incorrecto
+    }
+}
     </script>
 </body>
 </html>
